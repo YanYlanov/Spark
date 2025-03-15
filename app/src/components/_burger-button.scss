@@ -1,0 +1,25 @@
+@use '../styles/helpers' as *;
+
+.burger-button {
+    @include square(rem(34));
+
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: rem(6) rem(2);
+    color: var(--color-dark-pink);
+    background-color: transparent;
+    border: none;
+
+    @include hover {
+        color: var(--color-accent);
+    }
+
+    &__line {
+        width: 100%;
+        height: rem(4);
+        border-radius: var(--border-radius-small);
+        background-color: currentColor;
+        transition-duration: var(--transition-duration);
+    }
+}

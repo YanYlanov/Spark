@@ -1,0 +1,66 @@
+@use '../../styles/helpers' as *;
+
+.form-account-creation {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: rem(20);
+
+        .input {
+            width: 100%;
+        }
+    }
+
+    &__button {
+        margin-top: rem(10);
+        margin-bottom: rem(20);
+    }
+
+    &__form-footer {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(10);
+
+        @include mobile-s {
+            align-items: center;
+        }
+    }
+
+    &__terms {
+        font-size: rem(16);
+        color: var(--color-dark-pink-opacity-70);
+
+        @include mobile-s {
+            text-align: center;
+        }
+    }
+
+    &__consent {
+        &-label {
+            display: inline-flex;
+            align-items: center;
+            column-gap: rem(5);
+
+            &:hover .form-account-creation__custom-checkbox,
+            &:hover .form-account-creation__checkbox-label {
+                border-color: var(--color-accent);
+                color: var(--color-accent);
+            }
+        }
+    }
+
+    &__real-checkbox {
+        @include visually-hidden;
+
+
+        &:checked+.form-account-creation__custom-checkbox::before {
+            @include abs-center;
+            scale: 1;
+        }
+
+
+    }
+}

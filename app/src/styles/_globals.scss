@@ -1,0 +1,109 @@
+@use './helpers' as *;
+
+body {
+    @include fluid-text(18, 14);
+    color: var(--color-dark-pink);
+    // color: red;
+    font-family: var(--font-family-base);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(40);
+
+    @include laptop {
+        row-gap: rem(30);
+    }
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    color: var(--color-dark-pink);
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+h6 {
+    font-weight: 700;
+    font-family: var(--font-family-accent);
+}
+
+h1,
+.h1 {
+    @include fluid-text(75, 30);
+    line-height: 108%;
+}
+
+h2,
+.h2 {
+    @include fluid-text(40, 25);
+    line-height: 1.3;
+}
+
+h3,
+.h3 {
+    @include fluid-text(20, 16);
+
+}
+
+//! Потом поставить корректные значения 
+h4,
+.h4 {
+    @include fluid-text(18, 16);
+}
+
+h5,
+.h5 {
+    // @include fluid-text(24, 18);
+}
+
+h6,
+.h6 {
+    // @include fluid-text(20, 16);
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+
+a {
+    color: inherit;
+
+    @include hover {
+        color: var(--color-accent);
+    }
+
+    &[class] {
+        text-decoration: none;
+    }
+}
+
+.accent-color {
+    color: var(--color-accent);
+}

@@ -1,0 +1,53 @@
+@use '../../../styles/helpers' as *;
+
+.hero {
+    &__main {
+        margin-top: rem(80);
+
+        @include laptop {
+            margin-top: rem(60);
+        }
+
+        @include mobile {
+            margin-top: rem(40);
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(25);
+
+        @include laptop {
+            row-gap: rem(20);
+        }
+    }
+
+    &__title {
+        max-width: rem(710);
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-wrap: wrap;
+        column-gap: rem(10);
+        row-gap: rem(10);
+    }
+
+    &__soc1als {
+        margin-top: rem(80);
+
+
+        @include laptop {
+            margin-top: rem(60);
+        }
+
+        @include mobile {
+            margin-top: rem(35);
+        }
+    }
+
+    &__link {}
+}

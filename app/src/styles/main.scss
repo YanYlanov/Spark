@@ -1,0 +1,23 @@
+@use './normalize';
+@use './fonts';
+@use './veriables';
+@use './utils';
+@use './globals';
+
+@use '../components/logo';
+@use '../components/button';
+@use '../components/burger-button';
+@use '../components/field';
+@use '../components/custom-checkbox';
+@use '../components/header/header';
+@use '../pages/main/components/soc1als';
+
+// Spark | Главная
+@use '../pages/main/components/hero';
+@use '../pages/main/components/security-and-privacy';
+@use '../pages/main/components/find';
+@use '../components/footer/footer';
+
+
+@use '../components/account-acreation/account-creation';
+@use '../components/account-acreation/form-account-creation';

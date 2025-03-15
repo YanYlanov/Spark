@@ -1,0 +1,39 @@
+@use '../styles/helpers' as *;
+
+.field {
+    &__input {
+        padding-left: rem(15);
+        padding-block: calc(rem(19) - rem(1));
+        border: var(--border);
+        border-color: var(--color-dark);
+        border-radius: var(--border-radius-large);
+        height: var(--input-height);
+        background: var(--color-light);
+        width: 100%;
+        margin-bottom: rem(10);
+
+        &:focus {
+            outline: none;
+            background: var(--color-accent);
+            color: var(--color-light);
+            border-color: var(--color-dark-pink);
+
+            &::placeholder {
+                color: var(--color-light);
+            }
+        }
+
+        @include hover {
+            border-color: var(--color-accent);
+            outline: none;
+        }
+    }
+
+    &__label {
+        display: block;
+        margin-left: rem(15);
+        margin-bottom: rem(5);
+        font-size: rem(18);
+        font-weight: 600;
+    }
+}

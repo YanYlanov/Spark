@@ -1,0 +1,49 @@
+@use '../styles/helpers' as *;
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: calc(rem(44) - rem(1));
+    padding-block: calc(rem(21) - rem(1));
+    font-size: rem(18);
+    font-weight: 700;
+    line-height: 100%;
+    white-space: nowrap;
+    color: var(--color-dark);
+    border-radius: var(--border-radius-large);
+    border: var(--border);
+
+    @include hover {
+        background-color: var(--color-accent);
+        color: var(--color-light);
+    }
+
+    @include tablet {
+        padding-inline: calc(rem(25) - rem(1));
+        padding-block: calc(rem(19) - rem(1));
+    }
+
+    @include mobile {
+        font-size: rem(16);
+        padding-inline: calc(rem(18) - rem(1));
+        padding-block: calc(rem(17) - rem(1));
+    }
+
+
+    &--accent {
+        color: var(--color-light);
+        background-color: var(--color-accent);
+
+        @include hover {
+            border-color: var(--color-accent);
+            background: transparent;
+            color: var(--color-accent);
+        }
+    }
+
+    &--transparent {
+        border: var(--border);
+        background-color: transparent;
+    }
+}
