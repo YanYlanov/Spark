@@ -39,6 +39,7 @@
     }
 
     &__consent {
+
         &-label {
             display: inline-flex;
             align-items: center;
@@ -48,6 +49,7 @@
             &:hover .form-account-creation__checkbox-label {
                 border-color: var(--color-accent);
                 color: var(--color-accent);
+                transition-duration: var(--transition-duration);
             }
         }
     }
@@ -55,12 +57,14 @@
     &__real-checkbox {
         @include visually-hidden;
 
-
         &:checked+.form-account-creation__custom-checkbox::before {
             @include abs-center;
             scale: 1;
         }
 
+        &:focus+.form-account-creation__custom-checkbox {
+            outline: auto;
+        }
 
     }
 }

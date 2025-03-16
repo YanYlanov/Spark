@@ -1,16 +1,24 @@
 @use './helpers' as *;
 
+html {}
+
 body {
     @include fluid-text(18, 14);
     color: var(--color-dark-pink);
-    // color: red;
     font-family: var(--font-family-base);
+}
+
+body {
+    &.is-active {
+        overflow: hidden;
+    }
 }
 
 .main {
     display: flex;
     flex-direction: column;
     row-gap: rem(40);
+    flex-grow: 1;
 
     @include laptop {
         row-gap: rem(30);

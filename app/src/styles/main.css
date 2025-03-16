@@ -342,10 +342,15 @@ body {
   font-family: var(--font-family-base);
 }
 
+body.is-active {
+  overflow: hidden;
+}
+
 .main {
   display: flex;
   flex-direction: column;
   row-gap: 2.5rem;
+  flex-grow: 1;
 }
 @media (width <= 90.06125rem) {
   .main {
@@ -509,6 +514,7 @@ a[class] {
   color: var(--color-dark-pink);
   background-color: transparent;
   border: none;
+  z-index: 1000;
 }
 @media (any-hover: hover) {
   .burger-button:hover {
@@ -519,6 +525,22 @@ a[class] {
   .burger-button:active {
     color: var(--color-accent);
   }
+}
+.burger-button.is-active {
+  color: var(--color-light);
+}
+.burger-button.is-active .burger-button__line:first-child {
+  rotate: 45deg;
+  transform-origin: 0;
+  translate: 0.3em -0.1em;
+}
+.burger-button.is-active .burger-button__line:nth-child(2) {
+  rotate: -45deg;
+  transform-origin: 0;
+  translate: 0.3em 0.7em;
+}
+.burger-button.is-active .burger-button__line:nth-child(3) {
+  width: 0;
 }
 .burger-button__line {
   width: 100%;
@@ -591,66 +613,67 @@ a[class] {
   transition-duration: var(--transition-duration);
 }
 
-.header {
+.header-guest {
   padding-top: 1.875rem;
 }
-.header__inner {
+.header-guest__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 @media (width > 47.99875rem) {
-  .header__overlay {
+  .header-guest__overlay {
     display: contents;
   }
 }
 @media (width <= 47.99875rem) {
-  .header__overlay {
+  .header-guest__overlay {
     position: fixed;
     inset: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    row-gap: 0.1875rem;
+    row-gap: 3rem;
     padding: 1rem;
     background-color: var(--color-dark-pink);
+    transition-duration: var(--transition-duration);
   }
-  .header__overlay:not(.is-active) {
+  .header-guest__overlay:not(.is-active) {
     opacity: 0;
     visibility: hidden;
     translate: 100%;
   }
 }
-.header__menu-list {
+.header-guest__menu-list {
   display: flex;
-  column-gap: 2.9375rem;
   align-items: center;
+  column-gap: 2.9375rem;
   font-weight: 600;
 }
 @media (width <= 90.06125rem) {
-  .header__menu-list {
+  .header-guest__menu-list {
     column-gap: 2.1875rem;
   }
 }
 @media (width <= 63.99875rem) {
-  .header__menu-list {
+  .header-guest__menu-list {
     column-gap: 1.875rem;
   }
 }
 @media (width <= 47.99875rem) {
-  .header__menu-list {
+  .header-guest__menu-list {
     color: var(--color-light);
     flex-direction: column;
     row-gap: 0.75rem;
   }
 }
-.header__menu-link {
+.header-guest__menu-link {
   display: inline-flex;
   align-items: center;
   height: 2.5rem;
   position: relative;
 }
-.header__menu-link::after {
+.header-guest__menu-link::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -664,30 +687,30 @@ a[class] {
   transition-duration: inherit;
 }
 @media (any-hover: hover) {
-  .header__menu-link:hover::after {
+  .header-guest__menu-link:hover::after {
     width: 20%;
     opacity: 1;
   }
 }
 @media (any-hover: none) {
-  .header__menu-link:active::after {
+  .header-guest__menu-link:active::after {
     width: 20%;
     opacity: 1;
   }
 }
-.header__menu-link.is-active {
+.header-guest__menu-link.is-active {
   position: relative;
   color: var(--color-accent);
 }
-.header__menu-link.is-active::after {
+.header-guest__menu-link.is-active::after {
   opacity: 1;
   width: 20%;
 }
-.header__link {
+.header-guest__link {
   padding-inline: calc(1.5625rem - 0.0625rem);
 }
 @media (width <= 47.99875rem) {
-  .header__link {
+  .header-guest__link {
     padding-inline: calc(1.125rem - 0.0625rem);
     padding-block: calc(1.0625rem - 0.0625rem);
   }
@@ -1008,7 +1031,7 @@ a[class] {
   align-items: center;
   text-align: center;
   white-space: nowrap;
-  gap: 0.625rem;
+  column-gap: 0.625rem;
   margin-bottom: 1.25rem;
   width: 100%;
 }
@@ -1107,6 +1130,7 @@ a[class] {
 .form-account-creation__consent-label:hover .form-account-creation__custom-checkbox, .form-account-creation__consent-label:hover .form-account-creation__checkbox-label {
   border-color: var(--color-accent);
   color: var(--color-accent);
+  transition-duration: var(--transition-duration);
 }
 .form-account-creation__real-checkbox {
   position: absolute !important;
@@ -1126,6 +1150,9 @@ a[class] {
   left: 50%;
   translate: -50% -50%;
   scale: 1;
+}
+.form-account-creation__real-checkbox:focus + .form-account-creation__custom-checkbox {
+  outline: auto;
 }
 
 /*# sourceMappingURL=main.css.map */

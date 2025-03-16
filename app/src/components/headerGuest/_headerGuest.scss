@@ -1,6 +1,6 @@
 @use '../../styles/helpers' as *;
 
-.header {
+.header-guest {
     padding-top: rem(30);
 
     &__inner {
@@ -20,10 +20,10 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            row-gap: rem(3);
+            row-gap: 3rem;
             padding: 1rem;
             background-color: var(--color-dark-pink);
-
+            transition-duration: var(--transition-duration);
 
             &:not(.is-active) {
                 @include hide;
@@ -34,10 +34,12 @@
     }
 
     &__menu {
+        @include mobile {}
+
         &-list {
             display: flex;
-            column-gap: rem(47);
             align-items: center;
+            column-gap: rem(47);
             font-weight: 600;
 
             @include laptop {
@@ -54,8 +56,6 @@
                 row-gap: rem(12);
             }
         }
-
-        &-item {}
 
         &-link {
             display: inline-flex;
