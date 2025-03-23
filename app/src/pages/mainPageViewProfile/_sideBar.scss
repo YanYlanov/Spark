@@ -1,4 +1,4 @@
-@use "../styles/helpers" as *;
+@use "../../styles/helpers/index" as *;
 
 .sidebar {
   width: rem(160);
@@ -44,20 +44,12 @@
     }
   }
 
-  &__image {
-
-  }
-
   &__menu {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: rem(12);
     margin-bottom: auto;
-
-    &-link {
-
-    }
   }
 
   &__form {
