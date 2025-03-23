@@ -1,7 +1,7 @@
 @use 'helpers' as *;
 
 :root {
-    --color-accent: #986ADB;
+    --color-accent: #9769d9;
     --color-accent-opacity-15: rgba(152, 106, 219, 0.15);
     --color-dark: #000000;
     --color-light: #FFFFFF;
@@ -16,7 +16,7 @@
     --border-radius-small: #{rem(20)};
 
     --shadow-main: 0 0 10px 1px rgba(0, 0, 0, 0.03);
-    --shadow-small: 0 0 10px 1px rgba(0, 0, 0, 0.03);
+    --shadow-small: 0 0 8px 0 rgba(0, 0, 0, 0.08);
     --shadow-button-profile: 0 0 15px 1px rgba(0, 0, 0, 0.08);
 
     --font-family-base: 'Montserrat', sans-serif;
@@ -25,6 +25,7 @@
     --container-padding-x: #{rem(80)};
 
     --button-height: #{rem(60)};
+    --button-height-large:  #{rem(70)};
     --input-height: #{rem(60)};
 
     --transition-duration: 0.2s;

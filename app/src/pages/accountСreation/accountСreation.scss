@@ -1,4 +1,6 @@
-@use '../../styles/helpers' as *;
+@use '../../styles/helpers/index' as *;
+@use '../accountСreation/formAccountCreation' as *;
+
 
 .account-creation {
 

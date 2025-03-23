@@ -1,0 +1,14 @@
+@use '../../styles/helpers' as *;
+@use '../../components/sideBar';
+@use '../../pages/mainPageViewProfile/profileCard';
+
+body {
+  background: var(--color-dark-light);
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+}

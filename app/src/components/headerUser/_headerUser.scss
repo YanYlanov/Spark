@@ -1,3 +1,96 @@
 @use '../../styles/helpers' as *;
 
-.header-user {}
+.header-user {
+    padding-top: rem(30);
+    margin-bottom: rem(20);
+
+    &__body {
+
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__overlay {
+        display: contents;
+
+        @include mobile {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--color-dark-light);
+            transition-duration: var(--transition-duration);
+
+            &:not(.is-active) {
+                translate: 100%;
+            }
+        }
+    }
+
+    &__menu {
+        @include mobile {
+            overflow-y: auto;
+        }
+
+        &-list {
+            display: flex;
+            align-items: center;
+            column-gap: rem(47);
+            font-weight: 600;
+
+            @include mobile {
+                flex-direction: column;
+                row-gap: rem(12);
+            }
+        }
+
+        &-link {
+            display: inline-flex;
+            align-items: center;
+            height: rem(40);
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: rem(4);
+                border-radius: rem(2);
+                background-color: currentColor;
+                top: calc(100% - #{rem(8)});
+                left: 50%;
+                translate: -50%;
+                opacity: 0;
+                transition-duration: inherit;
+            }
+
+            @include hover {
+                &::after {
+                    width: 20%;
+                    opacity: 1;
+                }
+            }
+
+            &.is-active {
+                position: relative;
+                color: var(--color-accent);
+
+                &::after {
+                    opacity: 1;
+                    width: 20%;
+                }
+
+            }
+        }
+    }
+
+    &__link-my-profile {
+
+    }
+}

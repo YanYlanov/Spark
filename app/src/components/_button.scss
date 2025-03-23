@@ -46,4 +46,77 @@
         border: var(--border);
         background-color: transparent;
     }
+
+    &--small {
+        position: relative;
+        padding-inline: rem(18);
+        padding-block: rem(15);
+        border: none;
+        cursor: pointer;
+        border-radius: var(--border-radius-small);
+        background: var(--color-accent-opacity-15);
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: rem(3);
+            height: 0;
+            top: 50%;
+            left: calc(100% + rem(39));
+            transform: translateY(-50%);
+            background: var(--color-accent);
+            border-radius: rem(10);
+            transition-duration: var(--transition-duration);
+        }
+
+        &.is-active {
+            background: var(--color-accent);
+            &::before {
+                content: '';
+                position: absolute;
+                width: rem(3);
+                height: 83%;
+                top: 50%;
+                left: calc(100% + rem(39));
+                transform: translateY(-50%);
+                background: var(--color-accent);
+                border-radius: rem(10);
+                transition-duration: var(--transition-duration);
+            }
+
+            svg * {
+                stroke: var(--color-light);
+            }
+        }
+
+        @include hover {
+            &::before {
+                height: 83%;
+            }
+
+            svg * {
+                stroke: var(--color-light);
+            }
+        }
+    }
+
+    &--logout {
+        padding-inline: rem(18);
+        padding-block: rem(15);
+        border: none;
+        cursor: pointer;
+        border: var(--border);
+        border-radius: var(--border-radius-small);
+        background: transparent;
+
+        @include hover {
+            &::before {
+                height: 83%;
+            }
+
+            svg * {
+                stroke: var(--color-light);
+            }
+        }
+    }
 }

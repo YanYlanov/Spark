@@ -1,0 +1,67 @@
+@use "../styles/helpers" as *;
+
+.sidebar {
+  width: rem(160);
+  max-width: rem(160);
+  height: calc(100vh - 140px);
+  background: var(--color-light);
+  border-radius: var(--border-radius-small);
+  box-shadow: var(--shadow-main);
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding-inline: rem(18);
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block: rem(20);
+
+    &-link {
+      background: var(--color-dark-light);
+      border-radius: 50%;
+      margin-bottom: rem(12);
+    }
+
+    &-title {
+      white-space: nowrap;
+      margin-bottom: rem(5);
+    }
+
+    &-name {
+      color: var(--color-orange);
+    }
+  }
+
+  &__image {
+
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: rem(12);
+    margin-bottom: auto;
+
+    &-link {
+
+    }
+  }
+
+  &__form {
+    margin-bottom: rem(20);
+  }
+}
+

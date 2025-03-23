@@ -4,13 +4,16 @@
 @use './utils';
 @use './globals';
 
+
 @use '../components/logo';
+@use '../components/profileIcon';
 @use '../components/button';
 @use '../components/burgerButton';
 @use '../components/field';
 @use '../components/customCheckbox';
-@use '../components/headerGuest/headerGuest';
 @use '../pages/main/components/soc1als';
+@use '../components/headerGuest/headerGuest';
+@use '../components/headerUser/headerUser';
 
 // Spark | Главная
 @use '../pages/main/components/hero';
@@ -19,5 +22,5 @@
 @use '../components/footer/footer';
 
 
-@use '../components/accountСreation/accountСreation';
-@use '../components/accountСreation/formAccountCreation';
+
+

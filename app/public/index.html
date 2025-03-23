@@ -7,36 +7,37 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Spark | Главная</title>
     <link rel="stylesheet" href="../src/styles/main.css">
+    <script src="../src/main.js" type="module" defer></script>
 </head>
 
 <body>
-    <header class="header-guest">
+    <header class="header-guest" data-js-header>
         <div class="header-guest__body">
             <div class="header-guest__inner container">
                 <a href="./index.html" class="header-guest__logo logo">
-                    <img src="../src/assets/images/logo.png" alt="" class="logo__image" width="157" height="48"
+                    <img src="../src/assets/images/logo.png" alt="Spark" class="logo__image" width="157" height="48"
                         loading="lazy">
                 </a>
-                <div class="header-guest__overlay is-active">
+                <div class="header-guest__overlay" data-js-header-overlay>
                     <nav class="header-guest__menu">
                         <ul class="header-guest__menu-list">
                             <li class="header-guest__menu-item">
-                                <a href="" class="header-guest__menu-link is-active">Главная</a>
+                                <a href="../public/index.html" class="header-guest__menu-link is-active">Главная</a>
                             </li>
                             <li class="header-guest__menu-item">
-                                <a href="" class="header-guest__menu-link">О нас</a>
+                                <a href="#" class="header-guest__menu-link">О нас</a>
                             </li>
                             <li class="header-guest__menu-item">
-                                <a href="" class="header-guest__menu-link">Поддержка</a>
+                                <a href="#" class="header-guest__menu-link">Поддержка</a>
                             </li>
                         </ul>
                     </nav>
                 </div>
-                <a class="header-guest__link button button--transparent" href="#">
+                <a class="header-guest__link button button--transparent hidden-mobile" href="#">
                     Войти
                 </a>
-                <button class="header-guest__burger-button burger-button visible-mobile is-active" type="button"
-                    aria-label="Open menu" title="Open menu">
+                <button class="header-guest__burger-button burger-button visible-mobile" type="button"
+                    aria-label="Open menu" title="Open menu" data-js-header-burger-button>
                     <span class="burger-button__line"></span>
                     <span class="burger-button__line"></span>
                     <span class="burger-button__line"></span>
@@ -56,7 +57,7 @@
                         </p>
                     </div>
                     <div class="hero__buttons">
-                        <a class="hero__link button button--accent" href="./accountСreation.html">
+                        <a class="hero__link button button--accent" href="../src/pages/accountСreation/accountСreation.html">
                             Создать аккаунт
                         </a>
                         <a class="hero__link button button--transparent visible-mobile" href="#">
@@ -210,8 +211,8 @@
                     <h2 class="find__title">Spark - найди друзей, любовь и даже новые возможности!</h2>
                     <ul class="find__list">
                         <li class="find__item">
-                            <img src="../src/assets/images/find/1.jpg" alt="" class="find__image" width="452"
-                                height="480">
+                            <img src="../src/assets/images/main/find/1.jpg" alt="" class="find__image" width="452"
+                                 height="480">
                             <div class="find__item-body">
                                 <h3 class="find__item-title">Найди друзей, которые на одной волне с тобой</h3>
                                 <div class="find__item-description">
@@ -224,8 +225,8 @@
                             </div>
                         </li>
                         <li class="find__item">
-                            <img src="../src/assets/images/find/2.jpg" alt="" class="find__image" width="452"
-                                height="480">
+                            <img src="../src/assets/images/main/find/2.jpg" alt="" class="find__image" width="452"
+                                 height="480">
                             <div class="find__item-body">
                                 <h3 class="find__item-title">Создай историю любви, которая начнется здесь</h3>
                                 <div class="find__item-description">
@@ -238,8 +239,8 @@
                             </div>
                         </li>
                         <li class="find__item">
-                            <img src="../src/assets/images/find/3.jpg" alt="" class=" find__image" width="452"
-                                height="480">
+                            <img src="../src/assets/images/main/find/3.jpg" alt="" class=" find__image" width="452"
+                                 height="480">
                             <div class="find__item-body">
                                 <h3 class="find__item-title">Расширь горизонты и открой новые возможности</h3>
                                 <div class="find__item-description">
@@ -266,7 +267,7 @@
                             <ul class="soc1als__list">
                                 <!-- instagram -->
                                 <li class="soc1als__item">
-                                    <a href="" class="soc1als__link">
+                                    <a href="#" class="soc1als__link">
                                         <svg width="32" height="33" viewBox="0 0 32 33" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -290,7 +291,7 @@
                                 </li>
                                 <!-- threas -->
                                 <li class="soc1als__item">
-                                    <a href="" class="soc1als__link">
+                                    <a href="#" class="soc1als__link">
                                         <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -302,7 +303,7 @@
                                 </li>
                                 <!-- facebook -->
                                 <li class="soc1als__item">
-                                    <a href="" class="soc1als__link">
+                                    <a href="#" class="soc1als__link">
                                         <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -314,7 +315,7 @@
                                 </li>
                                 <!-- tik tok -->
                                 <li class="soc1als__item">
-                                    <a href="" class="soc1als__link">
+                                    <a href="#" class="soc1als__link">
                                         <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -336,17 +337,17 @@
                         <div class="footer__legal-info">
                             <ul class="footer__legal-info-list">
                                 <li class="footer__legal-info-item">
-                                    <a href="" class="footer__legal-info-link">
+                                    <a href="#" class="footer__legal-info-link">
                                         Политика и конфидециальность
                                     </a>
                                 </li>
                                 <li class="footer__legal-info__item">
-                                    <a href="" class="footer__legal-info-link">
+                                    <a href="#" class="footer__legal-info-link">
                                         Политика в отношении файлов Cookie
                                     </a>
                                 </li>
                                 <li class="footer__legal-info-item">
-                                    <a href="" class="footer__legal-info-link">
+                                    <a href="#" class="footer__legal-info-link">
                                         Условия
                                     </a>
                                 </li>
@@ -360,7 +361,7 @@
                             <ul class="footer__support-list">
                                 <!-- telegram -->
                                 <li class="footer__support-item">
-                                    <a href="" class="footer__support-link">
+                                    <a href="#" class="footer__support-link">
                                         <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0_343_569)">

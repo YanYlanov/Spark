@@ -22,7 +22,7 @@
             justify-content: center;
             row-gap: 3rem;
             padding: 1rem;
-            background-color: var(--color-dark-pink);
+            background-color: var(--color-dark-light);
             transition-duration: var(--transition-duration);
 
             &:not(.is-active) {
@@ -34,7 +34,9 @@
     }
 
     &__menu {
-        @include mobile {}
+        @include mobile {
+            overflow-y: auto;
+        }
 
         &-list {
             display: flex;
@@ -51,7 +53,6 @@
             }
 
             @include mobile {
-                color: var(--color-light);
                 flex-direction: column;
                 row-gap: rem(12);
             }

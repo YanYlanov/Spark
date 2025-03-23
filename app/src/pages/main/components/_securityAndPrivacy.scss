@@ -41,7 +41,6 @@
             width: 100%;
             max-width: rem(536);
 
-
             &:first-child {
                 justify-self: center;
                 grid-column: 1 / -1;
@@ -57,6 +56,7 @@
 
             svg {
                 flex-shrink: 0;
+                fill: currentColor;
 
                 @include mobile {
                     width: #{rem(50)};
@@ -84,7 +84,6 @@
                 row-gap: rem(5);
             }
         }
-
 
         &-item-body {
             display: contents;
