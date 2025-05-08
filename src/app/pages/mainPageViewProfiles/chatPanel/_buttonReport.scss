@@ -1,0 +1,22 @@
+@use '../../../../../styles/helpers' as *;
+
+.button-report {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: rem(2);
+  padding-inline: rem(2);
+  border: none;
+  color: var(--color-dark-pink);
+
+  @include hover {
+    color: var(--color-accent);
+  }
+
+  &__circle {
+    width: rem(8);
+    height: rem(8);
+    background: currentColor;
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Регистрация</title>
+</head>
+<body>
+    <main class="main">
+        <section class="account-creation">
+            <div class="account-creation__main container">
+                <div class="account-creation__inner">
+                    <div class="account-creation__body">
+                        <a href="/index.html" class="account-creation__logo logo">
+                            <img src="../../assets/images/logo.png" alt="Spark" class="logo__image" width="157" height="48"
+                                 loading="lazy">
+                        </a>
+                        <h2 class="account-creation__title">
+                            Создать аккаунт
+                        </h2>
+                        <div class="account-creation__auth-social auth-social">
+                            <!-- google -->
+                            <a href="#" class="auth-social__link button button--transparent">
+                                <img src="../../assets/icons/authSocial/google.svg" alt="">
+                            </a>
+                            <!-- apple -->
+                            <a href="#" class="auth-social__link button button--transparent">
+                                <img src="../../assets/icons/authSocial/apple.svg" alt="">
+                            </a>
+                        </div>
+                        <p class="account-creation__body-and">Или</p>
+                    </div>
+                    <form class="account-creation__form form-account-creation">
+                        <div class="form-account-creation__row">
+                            <!-- Name -->
+                            <div class="form-account-creation__field field">
+                                <label for="name" class="field__label label">Имя</label>
+                                <input type="text" class="field__input input" name="name" id="name"
+                                       placeholder="Введите свое имя" required>
+                            </div>
+                            <!-- Phone -->
+                            <div class="form-account-creation__field field">
+                                <label for="phone" class="field__label label">Телефон</label>
+                                <input type="tel" class="field__input input" name="phone" id="phone"
+                                       placeholder="Введите свой телефон" required>
+                            </div>
+                        </div>
+                        <!-- Email -->
+                        <div class="form-account-creation__field field">
+                            <label for="email" class="field__label label">Email</label>
+                            <input type="email" class="field__input input" name="email" id="email"
+                                   placeholder="Введите свой email" required>
+                        </div>
+                        <!-- Pass -->
+                        <div class="form-account-creation__field field">
+                            <label for="password" class="field__label label">Пароль</label>
+                            <input type="password" class="field__input input" name="password" id="password"
+                                   placeholder="Введите пароль" required>
+                        </div>
+                        <!-- Repeat pass -->
+                        <div class="form-account-creation__field field">
+                            <label for="repeat-password" class="field__label label">Повторите пароль</label>
+                            <input type="password" class="field__input input" name="repeat-password" id="repeat-password"
+                                   placeholder="Повторите пароль" required>
+                        </div>
+                        <button type="submit" class="form-account-creation__button button button--accent">
+                            Создать аккаунт
+                        </button>
+                        <div class="form-account-creation__form-footer">
+                            <div class="form-account-creation__terms">
+                                <p>
+                                    Нажимая Создать аккаунт, ты соглашаешься с нашими условиями. Чтобы узнать как мы
+                                    обрабатываем
+                                    твои данные ознакомся с
+                                    <a href="#">Политика и конфидециальность</a> и <a href="#">Политика в отношении файлов
+                                    Cookie</a>
+                                </p>
+                            </div>
+                            <div class="form-account-creation__consent">
+                                <label class="form-account-creation__consent-label">
+                                    <input type="checkbox" class="form-account-creation__real-checkbox real-checkbox"
+                                           name="agree" value="Согласится" required>
+                                    <span class="form-account-creation__custom-checkbox custom-checkbox"></span>
+                                    <span class="form-account-creation__checkbox-label">Согласиться</span>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

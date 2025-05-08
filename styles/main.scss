@@ -1,0 +1,22 @@
+@use 'normalize';
+@use 'fonts';
+@use 'veriables';
+@use 'utils';
+@use 'globals';
+
+
+@use '../src/app/components/logo';
+@use '../src/app/components/profileIcon';
+@use '../src/app/components/button';
+@use '../src/app/components/burgerButton';
+@use '../src/app/components/field';
+@use '../src/app/components/customCheckbox';
+@use '../src/app/pages/main/soc1als';
+@use '../src/app/components/headerGuest/headerGuest';
+@use '../src/app/components/headerUser/headerUser';
+
+// Spark | Главная
+@use '../src/app/pages/main/hero';
+@use '../src/app/pages/main/securityAndPrivacy';
+@use '../src/app/pages/main/find';
+@use '../src/app/components/footer/footer';

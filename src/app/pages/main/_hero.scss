@@ -1,0 +1,59 @@
+@use '../../../../styles/helpers' as *;
+
+.hero {
+    &__main {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        row-gap: rem(80);
+        margin-top: rem(80);
+
+        @include laptop {
+            row-gap: rem(60);
+            margin-top: rem(60);
+        }
+
+        @include mobile {
+            margin-top: rem(40);
+            row-gap: rem(35);
+            align-items: center;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(25);
+
+        @include laptop {
+            row-gap: rem(20);
+        }
+        
+        @include mobile {
+            align-items: center;
+        }
+    }
+
+    &__title {
+        max-width: rem(710);
+        
+        @include mobile {
+            text-align: center;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-wrap: wrap;
+        column-gap: rem(10);
+        row-gap: rem(10);
+    }
+
+    &__description {
+        @include mobile {
+            text-align: center;
+        }
+    }
+}

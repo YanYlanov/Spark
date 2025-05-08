@@ -1,0 +1,48 @@
+@use '../../../../../styles/helpers' as *;
+
+.field-input-search {
+
+  &__container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: rem(56);
+    color: var(--color-dark-pink-opacity-70);
+  }
+
+  &__input {
+    padding-left: rem(10);
+    height: rem(56);
+    border: rem(1) solid var(--color-accent);
+    border-radius: var(--border-radius-large);
+    width: 100%;
+
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: var(--color-dark-pink-opacity-70);
+  }
+
+    @include hover {
+      border-color: var(--color-dark-pink);
+    }
+  }
+
+  &__clear {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    display: none;
+    transition-duration: var(--transition-duration);
+
+    @include  hover {
+      opacity: 0.6;
+    }
+  }
+}

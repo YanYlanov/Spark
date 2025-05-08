@@ -1,0 +1,150 @@
+@use '../../../../styles/helpers' as *;
+.footer {
+
+    &__inner {
+        position: relative;
+        background: var(--color-dark-light);
+    }
+
+    &__decor {
+        position: absolute;
+
+        &--1 {
+            bottom: 0;
+            left: 0;
+        }
+
+        &--2 {
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    &__body {
+        padding-block: rem(185);
+
+        @include laptop {
+            padding-block: rem(140);
+        }
+
+        @include tablet {
+            padding-block: rem(100);
+        }
+
+        @include mobile {
+            padding-block: rem(80);
+        }
+
+        @include mobile-s {
+            padding-block: rem(60);
+        }
+    }
+
+    &__menu {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: rem(30);
+        }
+
+        @include mobile-s {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: rem(20);
+        }
+
+        &-column {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(15);
+            justify-self: center;
+            align-items: start;
+            text-align: left;
+            z-index: 2;
+
+            @include laptop {
+                justify-content: start;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    }
+
+    &__legal-info {
+        &-list {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            row-gap: rem(10);
+
+            @include laptop {
+                align-items: center;
+            }
+        }
+    }
+
+    &__support {
+        &-list {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            row-gap: rem(10);
+
+            @include laptop {
+                align-items: center;
+            }
+        }
+
+        &-link {
+            display: flex;
+            align-items: center;
+            column-gap: rem(8);
+        }
+    }
+
+    &__contact-us {
+        &-list {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            row-gap: rem(10);
+
+            @include laptop {
+                align-items: center;
+            }
+        }
+    }
+
+    &__soc1als {
+        .soc1als__list {
+            @include laptop {
+                align-items: center;
+            }
+        }
+    }
+
+    &__legal-info {
+        &-list {
+            @include laptop {
+                align-items: center;
+            }
+        }
+    }
+
+    &__support {
+        &-list  {
+            @include laptop {
+                align-items: center;
+            }
+        }
+    }
+
+    &__contact-us {
+        &-list {
+            @include laptop {
+                align-items: center;
+            }
+        }
+    }
+}

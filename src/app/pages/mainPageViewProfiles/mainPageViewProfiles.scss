@@ -1,0 +1,24 @@
+@use '../../../../styles/helpers' as *;
+@use './viewProfile/profileCard';
+@use './chatPanel/buttonReport' as *;
+@use './chatPanel/recentChats' as *;
+@use './chatPanel/chat' as *;
+@use './chatPanel/fieldInputSearch' as *;
+@use './chatPanel/chatPanel' as *;
+@use './sideBar';
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+
+  .view-profile {
+    align-self: center;
+  }
+}
+
+.container {
+  --container-padding-x: #{rem(10)};
+}
+

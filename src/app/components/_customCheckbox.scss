@@ -1,0 +1,23 @@
+@use '../../../styles/helpers' as *;
+
+.custom-checkbox {
+    position: relative;
+    display: inline-block;
+    width: rem(25);
+    height: rem(25);
+    border: rem(1) solid var(--color-dark);
+    border-radius: rem(5);
+
+
+    &::before {
+        @include abs-center;
+
+        content: '';
+        scale: 0;
+        display: inline-block;
+        width: rem(12);
+        height: rem(10);
+        background: url("@/app/assets/icons/check.svg") no-repeat center / contain;
+        transition-duration: var(--transition-duration);
+    }
+}

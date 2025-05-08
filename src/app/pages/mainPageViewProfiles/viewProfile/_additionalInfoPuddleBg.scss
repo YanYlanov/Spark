@@ -1,0 +1,17 @@
+@use '../../../../../styles/helpers' as *;
+
+.puddle-bg {
+  --backgroundPuddleBg: rgba(255, 255, 255, 0.35);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--backgroundPuddleBg);
+  padding-inline: rem(12);
+  padding-block: rem(8);
+  border-radius: rem(20);
+  font-size: rem(14);
+  font-family: 'Open Sans', sans-serif;
+  line-height: 100%;
+  letter-spacing: 0;
+}

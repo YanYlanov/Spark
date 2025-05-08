@@ -1,0 +1,118 @@
+@use '../../../styles/helpers' as *;
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: calc(rem(44) - rem(1));
+    padding-block: calc(rem(21) - rem(1));
+    font-size: rem(18);
+    font-weight: 700;
+    line-height: 100%;
+    white-space: nowrap;
+    color: var(--color-dark);
+    border-radius: var(--border-radius-large);
+    border: var(--border);
+
+    @include hover {
+        background-color: var(--color-accent);
+        color: var(--color-light);
+    }
+
+    @include tablet {
+        padding-inline: calc(rem(25) - rem(1));
+        padding-block: calc(rem(19) - rem(1));
+    }
+
+    @include mobile {
+        font-size: rem(16);
+        padding-inline: calc(rem(18) - rem(1));
+        padding-block: calc(rem(17) - rem(1));
+    }
+
+
+    &--accent {
+        color: var(--color-light);
+        background-color: var(--color-accent);
+
+        @include hover {
+            border-color: var(--color-accent);
+            background: transparent;
+            color: var(--color-accent);
+        }
+    }
+
+    &--transparent {
+        border: var(--border);
+        background-color: transparent;
+    }
+
+    &--small {
+        position: relative;
+        padding-inline: rem(18);
+        padding-block: rem(15);
+        border: none;
+        cursor: pointer;
+        border-radius: var(--border-radius-small);
+        background: var(--color-accent-opacity-15);
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: rem(3);
+            height: 0;
+            top: 50%;
+            left: calc(100% + rem(39));
+            transform: translateY(-50%);
+            background: var(--color-accent);
+            border-radius: rem(10);
+            transition-duration: var(--transition-duration);
+        }
+
+        &.is-active {
+            background: var(--color-accent);
+            &::before {
+                content: '';
+                position: absolute;
+                width: rem(3);
+                height: 83%;
+                top: 50%;
+                left: calc(100% + rem(39));
+                transform: translateY(-50%);
+                background: var(--color-accent);
+                border-radius: rem(10);
+                transition-duration: var(--transition-duration);
+            }
+
+            svg * {
+                stroke: var(--color-light);
+            }
+        }
+
+        @include hover {
+            color: var(--color-light);
+
+            &::before {
+                height: 83%;
+            }
+        }
+    }
+
+    &--logout {
+        padding-inline: rem(18);
+        padding-block: rem(15);
+        border: none;
+        cursor: pointer;
+        border: var(--border);
+        border-radius: var(--border-radius-small);
+        background: transparent;
+
+        @include hover {
+            color: var(--color-light);
+
+            &::before {
+                height: 83%;
+            }
+        }
+    }
+}

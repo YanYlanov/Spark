@@ -1,0 +1,27 @@
+@use '../../../../../styles/helpers' as *;
+
+.profile-card-button {
+  --ShadoButtonViewProfile: 0 0 15px 1px rgba(0, 0, 0, 0.08);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: var(--color-accent-opacity-15);
+    width: rem(65);
+    height: rem(65);
+    border-radius: 50%;
+    box-shadow: var( --ShadoButtonViewProfile);
+    color: var(--color-dark-pink);
+
+    @include  hover {
+      scale: 1.1;
+    }
+
+    &--like {
+      color: var(--color-light);
+      background: var(--color-accent);
+      width: rem(110);
+      height: rem(110);
+    }
+}

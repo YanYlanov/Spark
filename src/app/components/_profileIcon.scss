@@ -1,0 +1,25 @@
+@use '../../../styles/helpers' as *;
+
+.profile-icon {
+    --IconWidth: 60;
+    --IconHeight: 60;
+
+    &--link {
+        @include flex-center(true);
+        width: rem(60);
+        height: rem(60);
+        border: rem(2) solid var(--color-dark-pink-opacity-70);
+        border-radius: 50%;
+
+        @include hover {
+            border-color: var(--color-accent);
+        }
+    }
+
+    &__image {
+        &--sidebar {
+            padding-inline: rem(22);
+            padding-block: rem(16);
+        }
+    }
+}

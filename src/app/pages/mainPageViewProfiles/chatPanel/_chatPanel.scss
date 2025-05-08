@@ -1,0 +1,33 @@
+@use '../../../../../styles/helpers' as *;
+
+.chat-panel {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius-small);
+  box-shadow: var(--shadow-main);
+  width: rem(586);
+  height: calc(100vh - 140px);
+  background: var(--color-light);
+
+  &__form {
+    margin-top: rem(20);
+    margin-bottom: rem(10);
+    padding-inline: rem(20);
+  }
+
+  &__recent-chats {
+    margin: rem(0) rem(20) rem(20) rem(20);
+    padding-inline: rem(15);
+    padding-block: rem(15);
+    border-radius: var(--border-radius-small);
+    box-shadow: var(--shadow-small);
+  }
+
+  &__chat {
+    flex-grow: 1;
+    margin: rem(0) rem(20) rem(20) rem(20);
+    border-radius: var(--border-radius-small);
+    overflow: hidden;
+    box-shadow: var(--shadow-small);
+  }
+}
